@@ -1020,7 +1020,7 @@ textarea.form-input {
 
     textarea.form-input::-webkit-realizer { display: none; }
 
-.form-btn {
+.form-btn, .cv-btn {
     position: relative;
     width: 100%;
     background: var(--border-gradient-onyx);
@@ -1038,7 +1038,7 @@ textarea.form-input {
     transition: var(--transition1);
 }
 
-    .form-btn::before {
+    .form-btn::before, .cv-btn::before {
         content: '';
         position: absolute;
         inset: 1px;
@@ -1048,17 +1048,17 @@ textarea.form-input {
         transition: var(--transition1);
     }
 
-    .form-btn ion-icon { font-size: 16px; }
-    .form-btn:hover { background: var(--bg-gradient-yellow1); }
-        .form-btn::before { background: var(--bg-gradient-yellow2); }
+    .form-btn ion-icon, .cv-btn ion-icon { font-size: 16px; }
+    .form-btn:hover, .cv-btn:hover { background: var(--bg-gradient-yellow1); }
+    .form-btn::before, .cv-btn::before { background: var(--bg-gradient-yellow2); }
 
     .form-btn:disabled {
         opacity: .7;
         cursor: not-allowed;
     }
 
-        .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
-            .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
+        .form-btn:disabled:hover, .cv-btn:disabled:hover { background: var(--border-gradient-onyx); }
+            .form-btn:disabled:hover::before, .cv-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
 
 /*MEDIA QUERIES*/
@@ -1272,12 +1272,12 @@ textarea.form-input {
 
     textarea.form-input { margin-bottom: 30px; }
 
-    .form-btn {
+    .form-btn, .cv-btn {
         --fs-6: 16px;
         padding: 16px 20px;
     }
 
-        .form-btn ion-icon { font-size: 18px; }
+        .form-btn ion-icon, .cv-btn ion-icon { font-size: 18px; }
 }
 
 @media (min-width: 768px) {
@@ -1329,6 +1329,10 @@ textarea.form-input {
     .form-btn {
         width: max-content;
         margin-left: auto;
+    }
+    .cv-btn {
+        width: max-content;
+        margin-right: auto;
     }
 }
 
