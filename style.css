@@ -1524,3 +1524,114 @@ textarea.form-input {
 @media (min-width: 580px) {
     .cv-btn { width: auto; margin: 0 10px 35px; padding: 13px 30px; }
 }
+
+
+/*PORTFOLIO: featured projects and GitHub repositories*/
+
+.portfolio-subtitle { margin-bottom: 20px; }
+.portfolio .projects { margin-bottom: 40px; }
+
+.featured-list { display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+.featured-item {
+    position: relative;
+    background: var(--border-gradient-onyx);
+    border-radius: 16px;
+    box-shadow: var(--shadow2);
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+    .featured-item::before { content: ''; position: absolute; inset: 1px; background: var(--bg-gradient-jet); border-radius: inherit; z-index: -1; }
+
+.featured-cover {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 1px 1px 0;
+    border-radius: 15px 15px 0 0;
+}
+    .featured-cover img { max-height: 100%; max-width: 100%; object-fit: contain; filter: drop-shadow(0 10px 20px hsla(0, 0%, 0%, .35)); }
+
+.cover-blue   { background: linear-gradient(135deg, hsl(215, 60%, 28%), hsl(200, 70%, 45%)); }
+.cover-violet { background: linear-gradient(135deg, hsl(265, 55%, 24%), hsl(310, 55%, 42%)); }
+.cover-gold   { background: linear-gradient(135deg, hsl(0, 0%, 10%), hsl(45, 70%, 38%)); }
+
+.featured-mark { font-size: 54px; font-weight: var(--fw600); color: hsla(0, 0%, 100%, .92); letter-spacing: 2px; }
+
+.featured-body { padding: 20px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.featured-title { font-size: 18px; }
+.featured-text { color: var(--light-gray); font-weight: var(--fw300); font-size: var(--fs6); line-height: 1.6; }
+
+.proj-links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: auto; padding-top: 4px; }
+.proj-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--orange-yellow-crayola);
+    font-size: var(--fs6);
+    transition: color var(--transition1);
+}
+    .proj-link:hover { color: var(--vegas-gold); }
+
+.repo-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .repo-filter button {
+        color: var(--light-gray);
+        background: var(--border-gradient-onyx);
+        border-radius: 8px;
+        padding: 5px 12px;
+        font-size: var(--fs7, 13px);
+        transition: color var(--transition1);
+    }
+    .repo-filter button:hover { color: var(--light-gray70); }
+    .repo-filter button.active { color: var(--orange-yellow-crayola); }
+
+.repo-list { display: grid; grid-template-columns: 1fr; gap: 15px; margin-bottom: 25px; }
+
+.repo-item {
+    position: relative;
+    background: var(--border-gradient-onyx);
+    border-radius: 14px;
+    box-shadow: var(--shadow2);
+    z-index: 1;
+}
+    .repo-item::before { content: ''; position: absolute; inset: 1px; background: var(--bg-gradient-jet); border-radius: inherit; z-index: -1; transition: var(--transition1); }
+    .repo-item:hover::before { background: var(--bg-gradient-yellow2); }
+    .repo-item > a { display: flex; flex-direction: column; gap: 8px; height: 100%; padding: 18px; }
+
+.repo-name { display: flex; align-items: center; gap: 8px; font-size: var(--fs6); word-break: break-word; }
+    .repo-name ion-icon { color: var(--orange-yellow-crayola); flex: none; }
+
+.repo-desc {
+    color: var(--light-gray);
+    font-weight: var(--fw300);
+    font-size: var(--fs7, 13px);
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.repo-meta { display: flex; justify-content: space-between; margin-top: auto; padding-top: 6px; color: var(--light-gray70); font-size: 12px; }
+    .repo-lang { color: var(--orange-yellow-crayola); }
+
+.repo-status { color: var(--light-gray); text-align: center; margin-bottom: 20px; }
+.repo-more { margin: 0 auto; width: 100%; max-width: 320px; }
+
+@media (min-width: 580px) {
+    .repo-list { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 768px) {
+    .featured-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1250px) {
+    .repo-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+.featured-title, .repo-name, .portfolio-subtitle { text-transform: none; }
