@@ -7,3 +7,7 @@
 ##
 Personal website and interactive digital CV. Built with Python, PHP &amp; Node.JS to transform a static resume into a living portfolio.
 
+
+## Updating the CV
+Content lives in `cv-data.js` (EN / CS / RU) and drives both the website and the downloadable PDFs.
+After editing it, run `node tools/build-cv.js` (needs Google Chrome) to regenerate `_assets/CV/Emir-Aliev-{en,cs,ru}.pdf`.

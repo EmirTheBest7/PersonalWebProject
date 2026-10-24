@@ -1476,3 +1476,51 @@ textarea.form-input {
 
     .timeline-text { max-width: 700px; }
 }
+
+/*CV ADDITIONS: bullets, tags, language switcher, services icons*/
+
+.cv-btn { margin: 0 10px 35px; width: calc(100% - 20px); }
+
+.service-icon-box ion-icon {
+    display: block;
+    font-size: 36px;
+    color: var(--orange-yellow-crayola);
+    margin: auto;
+}
+
+.timeline-bullets { list-style: disc; padding-left: 18px; margin-top: 4px; }
+    .timeline-bullets li { margin-bottom: 4px; text-align: left; }
+    .timeline-bullets li::marker { color: var(--vegas-gold); }
+
+.timeline-item .timeline-text + .timeline-text { margin-top: 6px; }
+
+.skill { margin-bottom: 30px; }
+
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.tag {
+    color: var(--light-gray);
+    background: var(--border-gradient-onyx);
+    border-radius: 8px;
+    padding: 5px 12px;
+    font-size: var(--fs7, 13px);
+    font-weight: var(--fw300);
+    box-shadow: var(--shadow1, none);
+}
+
+.driving { margin-top: 15px; }
+
+.lang-switch { display: flex; align-items: center; gap: 2px; }
+
+.lang-btn {
+    color: var(--light-gray);
+    font-size: var(--fs8);
+    padding: 20px 5px;
+    transition: color var(--transition1);
+}
+    .lang-btn:hover, .lang-btn:focus { color: var(--light-gray70); }
+    .lang-btn.active { color: var(--orange-yellow-crayola); font-weight: var(--fw500); }
+
+@media (min-width: 580px) {
+    .cv-btn { width: auto; margin: 0 10px 35px; padding: 13px 30px; }
+}
